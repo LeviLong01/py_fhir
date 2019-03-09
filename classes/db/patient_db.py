@@ -178,7 +178,7 @@ class PatientDatabase:
     def insert_new_patient(self, json_data):
         try:
             cursor = self.conn.cursor()
-            cursor.execute("INSERT INTO fhir.patient (wellness_id, resource_type, first_name, last_name, message_body) "
+            cursor.execute("INSERT INTO fhir.patient ('', resource_type, first_name, last_name, message_body) "
                            "VALUES ('" + json_data['identifier'][0]['value'] + "','patient','" +
                            json_data['name'][0]['given'][0] + "','" + json_data['name'][0]['family'] + "','" + json.dumps(json_data) + "')")
             self.conn.commit()
