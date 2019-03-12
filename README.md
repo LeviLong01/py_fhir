@@ -3,7 +3,7 @@
 This is an open source FHIR API created by myself. Lots of work left to do
 
 Current supported resources:
-Patient
+1. ) Patient
 
 Stack:
 1. ) Python Flask
